@@ -1,0 +1,333 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Inter", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.curve {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 100px;
+}
+
+/* girl */
+
+.container {
+  position: relative;
+  width: 60%;
+  display: flex;
+  align-items: center;
+}
+
+.container img.bg {
+  position: absolute;
+  z-index: -1;
+  right: -3%;
+  bottom: -50px;
+  width: 550px;
+}
+
+.container img.quotePattern {
+  position: absolute;
+  z-index: -1;
+  top: -40px;
+  left: 15%;
+  width: 70px;
+}
+
+.quote {
+  position: relative;
+  flex: 1;
+  z-index: 1;
+}
+
+.quote p.girlQuote {
+  font-size: 22px;
+  line-height: 1.4;
+  font-weight: 300;
+}
+
+.quote p.girlName {
+  margin-top: 35px;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.quote span.girlSpan {
+  font-size: 13px;
+  font-weight: 700;
+  color: rgb(189, 189, 189);
+  margin-left: 4px;
+}
+
+.image {
+  position: relative;
+  right: 60px;
+  width: 40%;
+}
+
+.image img.girlImage {
+  filter: drop-shadow(-10px 20px 20px rgba(0, 0, 0, 0.171) );
+  width: 100%;
+}
+
+.image .arrows {
+  position: absolute;
+  bottom: -30px;
+  left: 10%;
+  width: 90px;
+  height: 45px;
+  padding: 0 12px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  z-index: 1;
+  box-shadow: -10px 12px 20px rgba(0, 0, 0, 0.067);
+}
+
+.arrows img.prev,
+.arrows img.next {
+  width: 13px;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.arrows img.prev:hover,
+.arrows img.next:hover {
+  transform: scale(1.4);
+}
+
+/* end girl */
+/* man */
+
+.quote p.manQuote {
+  display: none;
+  font-size: 22px;
+  line-height: 1.4;
+  font-weight: 300;
+}
+
+.quote p.manName {
+  display: none;
+  margin-top: 35px;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.quote p span.manSpan {
+  display: none;
+  font-size: 13px;
+  font-weight: 700;
+  color: rgb(189, 189, 189);
+  margin-left: 4px;
+}
+
+.image img.manImage {
+  display: none;
+  filter: drop-shadow(-10px 20px 20px rgba(0, 0, 0, 0.171));
+  width: 100%;
+}
+
+/* end man */
+/* media query */
+/* small mobile */
+
+@media screen and (max-width: 767px) {
+  .curve {
+      height: 50px;
+      width: 100%;
+    }
+  
+    .container {
+      width: 85%;
+      flex-direction: column-reverse;
+      justify-content: center;
+    }
+  
+    .container img.bg {
+      position: absolute;
+      z-index: -1;
+      right: -3%;
+      bottom: 280px;
+      width: 320px;
+    }
+  
+    .container img.quotePattern {
+      position: absolute;
+      z-index: -1;
+      top: -30px;
+      left: 15%;
+      width: 70px;
+    }
+  
+    .quote {
+      margin-top: 60px;
+      text-align: center;
+    }
+  
+    .quote p.girlQuote,
+    .quote p.manQuote {
+      font-size: 20px;
+    }
+  
+    .quote p.girlName,
+    .quote p.manName {
+      font-size: 16px;
+    }
+  
+    .quote span.girlSpan,
+    .quote p span.manSpan {
+      font-size: 11px;
+      margin-left: 0;
+      margin-top: 5px;
+      display: block;
+    }
+  
+    .image {
+      right: 0;
+      width: 100%;
+      display: flex;
+      align-items: center;
+    }
+  
+    .image img.girlImage,
+    .image img.manImage {
+      width: 80%;
+      margin: 0 auto;
+    }
+  
+    .image .arrows {
+      bottom: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 90px;
+      height: 45px;
+      padding: 0 12px;
+    }
+  
+    .arrows img.prev,
+    .arrows img.next {
+      width: 13px;
+      cursor: pointer;
+      transition: .3s;
+    }
+  
+    .arrows img.prev:hover,
+    .arrows img.next:hover {
+      transform: scale(1.4);
+    }
+}
+
+/* tablet */
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .container {
+      width: 85%;
+    }
+    .curve {
+      height: 120px;
+    }
+    .container img.bg {
+      right: 0;
+      bottom: -30px;
+      width: 400px;
+    }
+  
+    .container img.quotePattern {
+      top: -20px;
+      width: 50px;
+    }
+  
+    .quote p.girlQuote,
+    .quote p.manQuote {
+      font-size: 18px;
+    }
+  
+    .quote p.girlName,
+    .quote p.manName {
+      margin-top: 30px;
+      font-size: 16px;
+    }
+  
+    .quote span.girlSpan,
+    .quote p span.manSpan {
+      font-size: 12px;
+    }
+  
+    .image .arrows {
+      bottom: -20px;
+      height: 40px;
+    }
+    .image {
+      right: 30px;
+    }
+    .arrows img.prev,
+    .arrows img.next {
+      width: 12px;
+    }
+}
+
+/* laptop */
+
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+  .container {
+      width: 70%;
+    }
+    .curve {
+      height: 100px;
+    }
+    .container img.bg {
+      right: 0;
+      bottom: -30px;
+      width: 400px;
+    }
+  
+    .container img.quotePattern {
+      top: -20px;
+      width: 50px;
+    }
+  
+    .quote p.girlQuote,
+    .quote p.manQuote {
+      font-size: 18px;
+    }
+  
+    .quote p.girlName,
+    .quote p.manName {
+      margin-top: 30px;
+      font-size: 16px;
+    }
+  
+    .quote span.girlSpan,
+    .quote p span.manSpan {
+      font-size: 12px;
+    }
+  
+    .image .arrows {
+      bottom: -20px;
+      height: 40px;
+    }
+  
+    .arrows img.prev,
+    .arrows img.next {
+      width: 12px;
+    }
+}
